@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1 align="center">Form</h1>
+    <form action="" method="" enctype="multipart/form-data" >
+        <table align="center" border="1" cellspacing="10px" >
+            <tr>
+                <th>Full Name:</th>
+                <td>
+                    <input type="text" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td>
+                    <input type="email" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td>
+                    <input type="tel" name="" id=""
+                    required pattern="\d{10}" title="Phone number must be exactly 10 digits.">
+
+                </td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <td>
+                    <select name="" id="">
+                        <option value="Subject">Science</option>
+                        <option value="Subject">Math</option>
+                        <option value="Subject">English</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>
+                <textarea id="message" name="message" rows="5" 
+                required minlength="10" maxlength="500"
+                placeholder="Write your message here..." required></textarea>
+
+                </td>
+            </tr>
+            <tr>
+            <td colspan="2" align="center">
+        <input  type="submit" value="Submit">
+            </td>
+            </tr>
+        </table>
+      </form>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <style>
+
+        .table, th, td {
+            border: 1px solid black;   
+            border-collapse: collapse; 
+            
+        }
+        
+        .table{
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 1000px;
+            margin-left:  auto;
+            margin-right: auto; 
+            /* text-align: center; */
+        }
+        
+        .th{
+            background-color: pink;
+            padding:10px;
+            text-align: left;
+            color: darkblue; 
+
+        }
+
+
+        .td{
+            padding: 8px;
+            text-align: center;
+            color: aquamarine;
+
+        }
+        .title-row{
+            background-color: hsl(210, 29%, 24%);
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            padding: 12px 16px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+    <thead>
+        <tr>
+            <th class="title-row" colspan="5">Product Catalog</th>
+        </tr>
+
+        <tr>
+        <th class="th">Product Name</th>
+        <th class="th">Product Image</th>
+        <th class="th">Price</th>
+        <th class="th">Description</th>
+        <th class="th">Availability</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Sonata Watch</td>
+            <td>
+                <img src="watch.jpg" alt="watch" height="100px" width="100px">
+            </td>
+            <td> $1500</td>
+            <td>Sonata Poze Quartz Analog Green Dial Metal Strap Watch for Men</td>
+             <td style="color: red;">Out of Stock</td>
+
+        </tr>
+        <tr>
+            <td>Kurti Set</td>
+            <td>
+                <img src="kurti.jpg" alt="Kurti Set" height="100px" width="100">
+            </td>
+            <td>$800</td>
+            <td>GoSriKi Women's Georgette Anarkali Kurta Set with Dupatta | Elegant Pink Ethnic Dress | Flared Long Kurti for Festive</td>
+            <td style="color: green;">Available</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
