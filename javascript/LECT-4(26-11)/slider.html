@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .hero-div{
+            height:700px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+        }
+        .hero-img{
+            height: 500px;
+            width:500px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        } 
+        #img2{
+            display: none;
+
+        }
+         #img3{
+            display: none;
+
+        }
+
+
+        .leftbtn{
+            position: absolute;
+            top: 250px;
+            right: 50px;
+        }
+        .rightbtn{
+            position: absolute;
+            top: 250px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-div">
+        <button onclick="moveleft()" class="leftbtn">Left</button>
+        <button onclick="moveright()" class="rightbtn">Right</button>
+        <img src="img1.webp" alt="" id="img-1">
+        <img src="img2.jpg" alt="" id="img-2">
+        <img src="img3.avif" alt="" id="img-3">
+
+        <script>
+            let counter = 1;
+            function moveright(){
+
+                if(counter >=3){
+                    document.getElementById('img-3').style.display="block";
+                }
+                else{
+                    document.getElementById('img-'+counter).style.display="none";
+                    counter++;
+
+                    document.getElementById('img-'+counter).style.display="block";
+                }
+            }
+
+             function moveleft(){
+
+                if(counter <=1){
+                    document.getElementById('img1').style.display="block";
+                }
+                else{
+                    document.getElementById('img-'+counter).style.display="none";
+                    counter++;
+
+                    document.getElementById('img-'+counter).style.display="block";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+</html>

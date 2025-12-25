@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+
+    =========================
+    
+    <!-- <fieldset>
+        <label for="">Enter x</label>
+        <input type="text" name="" id="x"><br><br>
+
+        <label for="">Enter y</label>
+        <input type="text" name="" id="y">
+        <button onclick="quadrantfind()">Check</button>
+    </fieldset>
+
+    <script>
+        function quadrantfind(){
+            let x = document.getElementById('x').value;
+            let y = document.getElementById('y').value;
+
+            if(x>0 && y>0){
+                alert("First Quadrant");
+            }
+            else if(x<0 && y>0){
+                alert("Second Quadrant");
+            }
+            else if(x>0 && y<0){
+                alert("Third Quadrant");
+            } 
+            else if(x<0 && y>0){
+                alert("Forth Quadrant");
+            }
+            else{
+                alert("No Resuult");
+            }
+        } -->
+    <!-- </script> -->
+
+
+<!-- ================Conditional Operator===================== -->
+
+
+  <fieldset>
+        <label for="">Find Positive Negative</label>
+        <input type="text" name="" id="n1"><br><br>
+        <button onclick="positivenegativefind()">Check</button>
+
+
+    </fieldset>
+
+
+
+    <script>
+        function positivenegativefind(){
+            let n1 = document.getElementById('n1').value
+            let msg = (n1>0)?"number is positive":"number is negative";
+            alert(msg);
+        }
+    </script>
+</body>
+</html>

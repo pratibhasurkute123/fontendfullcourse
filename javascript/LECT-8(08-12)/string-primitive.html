@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let str = 'As sly as an fox, as strong as an ox';
+
+        let position = 0;
+        let target = "an";
+        let counter = 0;     //using for counting how much time an using in sentence
+
+        while(true){
+            let foundPos = str.indexOf(target,position);
+            console.log(foundPos);
+            counter++;
+            
+            position = foundPos+1;
+        }
+        
+
+        console.log("found as : ",counter);
+        
+
+
+    </script>
+</body>
+</html>

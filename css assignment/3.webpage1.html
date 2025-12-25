@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #nav1{
+            display: flex;
+            justify-content: end;
+            justify-items: center;
+            padding: 10px;
+            height: 100px;
+            /* background-color: #6B4A3A; */
+            background-color: #B76E79;
+
+        }
+        .logo{
+            left: 50px;
+            position: absolute;
+            font-size: 3em;
+            color: black;
+            margin-top: 10px;
+       }
+       li{
+        display: inline-flex;
+        width: 100px;
+        font-size: 20px;
+        color: black;
+        margin-top: 20px;
+       }
+       li:hover {
+        background-color:white;
+        padding: 5px;
+       }
+       .sec{
+        height: 650px;
+        width: 100%;
+        /* background-color: black; */
+        background-color:#8B4C56;
+        display: flex;
+        /* position: relative; */
+        gap: 10px;
+        padding: 10px;
+       }
+       #nav2 ul{
+        text-align: center;
+        padding: 0 30px;
+        position: relative;
+        width: 80%;
+       }
+       #nav li{
+        font-size: 20px;
+        margin: 15px;
+        color: white;
+       }
+       .Aside{
+        /* position: absolute;
+        left: 30px;
+        top: 20px; */
+        height: 300px;
+        width: 250px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-radius: 20px;
+        margin: 20px 20px;
+        margin-top: 5%;
+        /* background-color: bisque; */
+        background-color: #B76E79
+
+       }
+   .content{
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: 1fr;
+
+    gap: 5px;
+    padding: 5px;
+    max-width: 710px;
+    /* margin-left: 150px;  */
+}
+
+.content img{
+    width: 100%;
+    max-width: 650x;
+    height: auto;              
+    object-fit: contain;       
+    background: #f7f3ee;          
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15)
+}
+@media (min-width: 768px){
+    .content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.text p{
+    /* color: white; */
+    color: #2F2F2F;
+    margin-top: 10px;
+    margin: 0 30px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 50px;
+}
+.text h1{
+    color: white;
+    margin-top: 120px;
+    margin-right: 20px;
+}
+.footer{
+    /* background-color: rgb(107, 102, 102); */
+    background-color: #F3D3C1;
+     justify-content: center;
+     display: flex; 
+    padding:20px;
+    height: 70px;
+    font-size: 1.5em; 
+}
+.btn{
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    align-items: center;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+
+
+}
+.text {
+        text-align: center;
+    }
+.text h1{
+    margin-top: 0 0 20px 0 ;
+}    
+.text p{
+    margin-top: 0 30px 20px;
+}
+
+  </style>
+</head>
+<body>
+    <nav id="nav1">
+        <div class="logo">P JEWELLERY</div>
+        <ul>
+            <li>Home</li>
+            <li>Shop</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <div class="sec">
+        <div class="Aside">
+        <h2>SIDEBAR</h2>
+        <nav id="nav2">
+        <ul>
+            <li>Rings</li>
+            <li>Bangles</li>
+            <li>Earings</li>
+            <li>Chain</li>
+        </ul>
+        </nav>
+        </div>
+        <div class="content">
+            <img class="img1" src="bangles.jpeg" alt="">
+            <img src="chains.jpeg" alt="">
+            <img src="ring.jpeg" alt="">
+            <img class= "img2" src="hjh.jpeg" alt="">
+        </div>
+        <div class="text">
+            <h1>JEWELLERY</h1>
+            <p>From the very beginning, jewelry has been primarily used as an artistic and fashionable item. In almost all the cultures, jewelry is used as an ornament to enhance and exhibit beauty of human body.</p>
+            <button class="btn">Shop Now</button>
+
+        </div>
+    </div>
+    <div class="footer">© 2025 P Jewellery. All Rights Reserved.
+    </div>
+    
+</body>
+</html>

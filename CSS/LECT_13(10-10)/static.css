@@ -1,0 +1,26 @@
+  *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+        }
+        /* ul{
+            border: 2px solid white;
+         } */
+         li{
+            color: white;
+            display: inline-block;
+            width: 100px;
+            
+            text-align: center;
+             padding: 10px 0px;
+
+         }
+         li:hover{
+            background-color: white;
+            color: black;
+         }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class category{
+            constructor(catname){
+                this.catname=catname
+                console.log("in cat class", this.catname);
+                
+            }
+            
+        }
+        class product extends category{
+            constructor(name,price,cname){
+                super(cname)
+                this.name=name;
+                this.price=price;
+            }
+            show(){
+                console.log("product name :" ,this.name);
+                console.log("product price :",this.price);
+                
+            }
+        }
+
+        let p1 = new product("laptop","20000","electronics");
+        p1.show();
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product=[{
+            pid:1,
+            pname:"Fridge",
+            price:21500,
+            category:"Electronic"
+        },
+        {    
+             pid:2,
+            pname:"Washing Machine",
+            price:25000,
+            category:"Electronic"
+        },
+          {
+               pid:3,
+            pname:Cooker,
+            price:2100,
+            category:"Home Utility"
+        },
+
+        ]
+        function getPro(cat){
+            let productFilter;
+            if(cat=="home"){
+                productFilter = product.filter(index=>index.category=="Home utility")
+                console.log(productFilter);
+            }
+            else if(cat =="ele"){
+                productFilter = product.filter(index=>index.category=="Electronic")
+            }
+        }
+    </script>
+</body>
+</html>

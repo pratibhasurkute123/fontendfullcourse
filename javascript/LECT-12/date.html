@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>box</div>
+    <script>
+        function genTime(){
+            let todate = new Date();
+            console.log(todate);
+
+            let datestr = `
+                ${ todate.getDate()}- ${ todate.getMonth()}- ${ todate.getFullYear()} ${ todate.getHours()}:${todate.getMinutes()}:${ todate.getSeconds()}
+            `
+            document.getElementById("box").innerHTML = datestr;
+        }
+
+        setInterval(getTime,1000)
+    </script>
+</body>
+</html>
