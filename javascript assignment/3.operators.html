@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operator Example</title>
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 40px auto;
+            width: 500px;
+            
+        }
+        .btn{
+            border-radius: 15px;
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            width: 150px;
+            padding: 10px;
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+        fieldset{
+            background-color: bisque;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+    <h1>JavaScript Operator Demo</h1>
+    <label for="">Enter number 1</label>
+    <input type="text" name="" id="a">
+    <br><br>
+
+    <label for="">Enter number 2</label>
+    <input type="text" name="" id="b">
+    <br><br>
+    <input class="btn" type="button" value="submit" onclick="operator()">
+    <div id="result"></div>
+    </fieldset>
+
+    <script>
+        function operator(){
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+
+        a = Number(a);
+        b = Number(b);
+
+        let str = `
+            addition = ${a+b}<br>
+            mul = ${a*b}<br>
+            div = ${a/b}<br>
+            sub = ${a-b}<br>
+            `
+
+            let comparison = `
+                Are a and b equal? ${a==b}<br>
+                Is a greater then b?${a>b}<br>
+                `
+
+            let logical = `
+                Are both numbers positive? ${ (a>0 && b>0) ? 'Yes' : 'No' }
+                <br>
+                `   
+
+            document.getElementById('result').innerHTML=str + comparison + logical;
+        }
+    </script>
+</body>
+</html>
+

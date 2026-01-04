@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4a4658;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            /* font-size: 10em; */
+
+        }
+         #clock {
+            font-size: 60px;
+            letter-spacing: 2px;
+            padding: 100px 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">00:00:00</div>
+    <script>
+
+         function addZero(num) {
+            return num < 10 ? '0' + num : num;
+        }
+        function updateClock(){
+            let todate = new Date();
+            const hours = addZero(todate.getHours());
+            const minutes = addZero(todate.getMinutes());
+            const seconds = addZero(todate.getSeconds());
+             console.log(todate);
+            
+
+            let dateStr =`${hours}:${minutes}:${seconds}`;
+
+            document.getElementById("clock").innerHTML = dateStr;
+
+        }
+
+        updateClock();
+
+        setInterval(updateClock,1000);
+    </script>   
+    

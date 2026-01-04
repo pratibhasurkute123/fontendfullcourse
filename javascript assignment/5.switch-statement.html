@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* *{
+            padding: 20;
+            margin: 20;
+            box-sizing: border-box;
+        } */
+        body{
+            width: 500px;
+            padding: 20px;
+            margin: 40px auto;
+            align-items: center;
+            text-align: center;
+            
+        }
+        .txt{
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .btn{
+            margin-left: 20px;
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+        fieldset{
+            background-color: cadetblue;
+        }
+
+    </style>
+</head>
+<body>
+   <fieldset>
+       <h1>Find Day Of The Week</h1> 
+
+    <label>
+        Enter a number(1-7):
+    </label>
+    <input class= "txt" type="text" id="dayNum">
+    <button class="btn" onclick="getDay()">Check Day</button> 
+    <div id="dayResult"></div>
+   </fieldset>
+
+   <script>
+    function getDay(){
+        let day = Number(document.getElementById('dayNum').value);
+        let dayName;
+
+        switch(day){
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;        
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;  
+             case 6:
+                dayName = "Saturday";
+                break;   
+             case 7:
+                dayName = "Sunday";
+                break;    
+            default:
+                dayName="Invalid input! Please Enter a number between 1 to 7";           
+
+        }
+
+        document.getElementById('dayResult').innerHTML = dayName;
+    }
+   </script>
+</body>
+</html>
