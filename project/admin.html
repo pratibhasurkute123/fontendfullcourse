@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="main-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="user.html">User</a></li>
+        <li><a href="transporter.html">Transporter</a></li>
+        <li><a href="admin-orders.html">View Orders</a></li>
+
+        <!-- Logout Button -->
+        <li id="logoutLink" style="display:none;">
+            <a href="#" onclick="logout()">Logout</a>
+        </li>
+    </ul>
+</nav>
+
+<section class="admin-dashboard">
+    <h1 id="welcomeMsg"></h1>
+    <p>This is Admin Panel</p>
+</section>
+
+<!-- JavaScript -->
+<script src="java.js"></script>
+
+<script>
+    // 🔐 Protect Admin Page
+    if(localStorage.getItem("role") !== "admin"){
+        window.location.href = "user.html";
+    }
+
+    // Show Logout Button
+    document.getElementById("logoutLink").style.display = "block";
+
+    // Show Welcome Message
+    const name = localStorage.getItem("username");
+    if(name){
+        document.getElementById("welcomeMsg").innerText = "Welcome " + name;
+    }
+</script>
+
+</body>
+</html>

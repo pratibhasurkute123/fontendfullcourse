@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="main-nav">
+    <h2>Welcome to Dashboard</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="user.html">User</a></li>
+    </ul>
+</nav>
+
+<!-- ✅ Logout Button Here -->
+<div style="text-align:right; padding:20px;">
+    <button onclick="logout()" id="logoutBtn">
+        Logout
+    </button>
+</div>
+
+<script src="java.js"></script>
+
+<script>
+    // Page Protection
+    if(localStorage.getItem("role") !== "user"){
+        window.location.href = "user.html";
+    }
+
+    // Show logout button
+</script>
+
+</body>
+</html>

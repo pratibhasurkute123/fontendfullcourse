@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transporter Orders</title>
+</head>
+<body>
+
+<h2>Approved Orders</h2>
+
+<div id="transportList"></div>
+
+<script>
+
+let container = document.getElementById("transportList");
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+console.log("Orders:", orders);   //  IMPORTANT DEBUG
+
+if(orders.length === 0){
+    container.innerHTML = "<p>No Orders Found</p>";
+}
+
+orders.forEach((order, index) => {
+
+    if(order.status === "Approved"){
+
+        container.innerHTML += `
+            <div style="border:1px solid green; padding:10px; margin:10px;">
+                <p><b>Material:</b> ${order.material}</p>
+                <p><b>Quantity:</b> ${order.quantity}</p>
+                <p><b>Status:</b> ${order.status}</p>
+                <button onclick="deliverOrder(${index})">
+                    Mark Delivered
+                </button>
+            </div>
+        `;
+    }
+});
+
+function deliverOrder(index){
+    orders[index].status = "Delivered";
+    localStorage.setItem("orders", JSON.stringify(orders));
+    alert("Delivered Successfully!");
+    location.reload();
+}
+
+</script>
+
+</body>
+</html>

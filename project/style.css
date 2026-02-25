@@ -1,0 +1,504 @@
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+ body {
+            /* display: inline; */
+            background-color: #dddddd;
+            margin: 0;
+            padding: 0;
+        }
+ .container{
+    display: flex;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 300;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    margin: 0;
+
+ }
+
+.top-header{
+    background-color: #f4a900;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 55px;
+    font-weight: 800;
+    padding: 20px 20px;
+    justify-content: center;
+    
+}
+.info-box{
+    margin-left: 10px;
+    padding: 20px 10px;
+    display: inline-block;
+    /* flex: 1;
+    text-align: center; */
+
+    
+} 
+
+.top-header,
+.main-nav,
+.home{
+    margin-left: 0;
+    margin-right: 0;
+}
+.info-box i{
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.main-nav {
+    /* width:  100%; */
+    background: #030f27 ;
+     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: 5px;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+
+    
+}
+.main-nav ul{
+    list-style:none;
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+
+.main-nav li{
+    color:#ffffff;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.main-nav li:hover{
+    color:#f2a900;           
+}
+.home{
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    display: flex;
+    
+   position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 80vh;
+    transition-duration:calc(1s);
+
+}
+
+
+.home-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%) ;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeText 8s infinite;
+}
+.home-text h1{
+    font-size: 64px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.home-text p{
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide{
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeText 16s infinite;
+    filter: brightness(60%);
+}
+
+/* Delay for each image */
+.slide1{ animation-delay: 0s; }
+.slide2{ animation-delay: 4s; }
+.slide3{ animation-delay: 8s; }
+
+/* Fade animation */
+@keyframes fadeText{
+    0%{ opacity: 0; }
+    10%{ opacity: 1; }
+    25%{ opacity: 1; }
+    35%{ opacity: 0; }
+    100%{ opacity: 0; }
+}
+
+.features{
+    display: flex;
+    /* object-fit: cover; */
+    width: 100%;
+    /* margin: 0, 100px; */
+     height: 250px; 
+    /* margin: 0;
+    padding: 0;  */
+
+    
+}
+
+.feature{
+    padding: 60px 40px;
+    flex: 1;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+ 
+}
+
+.feature i{
+    font-size: 50px;
+     margin-bottom: 20px;
+
+}
+
+.feature p{
+    font-size: 18px;
+    line-height: 1.6;
+        /* margin-left: 100px; */
+        margin: 0;
+}
+
+/* COLORS */
+.feature.dark{
+    background: #030f27;
+    color: #f4a900;
+}
+
+.feature.yellow{
+    background: #f4a900;
+}
+.feature h3{
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+}
+.feature p{
+    margin-left: 100px;
+}
+
+.feature-title {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
+.feature-title h3{
+     font-size: 30px;
+    font-weight: 800;
+    
+}
+.feature-title i{
+    font-size: 40px;
+
+}
+.home-text:nth-of-type(1){
+    animation-delay: 0s;
+}
+
+.home-text:nth-of-type(2){
+    animation-delay: 4s;
+}
+
+.user-dashboard{
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.user-dashboard button{
+    padding: 12px 25px;
+    background-color: #f4a900;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.main-nav a:hover{
+    color: #f4a900;
+}
+.user-dashboard{
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px auto;
+    gap: 15px;
+}
+
+.login-form input{
+    padding: 12px;
+    font-size: 16px;
+}
+
+.login-form button{
+    padding: 12px;
+    background-color: #f4a900;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form button:hover{
+    background-color: #030f27;
+    color: white;
+}
+.dashboard{
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.dashboard-cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.card{
+    background-color: #f4f4f4;
+    padding: 30px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.logout-btn{
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Section Styling */
+.store-info {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Card Container */
+.material-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card Design */
+.material-card {
+    background: white;
+    width: 280px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image */
+.material-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Title */
+.material-card h3 {
+    margin: 15px 0 10px;
+}
+
+/* Button */
+.material-card button {
+    background-color: #f4a900;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.material-card button:hover {
+    background-color: black;
+    color: white;
+}
+.qty {
+    width: 60px;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.total {
+    margin: 10px 0;
+    font-weight: bold;
+    color: green;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;  /* move items to right */
+    align-items: center;
+    background-color: #001f3f;
+    padding: 15px 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav ul li a,
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-right {
+    color: white;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+} */
+
+/* ========================= */
+/* ADMIN & TRANSPORT DASHBOARD */
+/* ========================= */
+
+.dashboard-section{
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    min-height: 80vh;
+}
+
+/* Order Card */
+.order-card{
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    border-left: 8px solid #f4a900;
+    transition: 0.3s ease;
+}
+
+.order-card:hover{
+    transform: translateY(-5px);
+}
+
+/* Status Colors */
+.order-card.approved{
+    border-left: 8px solid green;
+}
+
+.order-card.pending{
+    border-left: 8px solid orange;
+}
+
+.order-card.delivered{
+    border-left: 8px solid #030f27;
+}
+
+/* Buttons */
+.btn{
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-approve{
+    background-color: green;
+    color: white;
+}
+
+.btn-deliver{
+    background-color: #030f27;
+    color: white;
+}
+
+.btn:hover{
+    opacity: 0.85;
+}
+
+/* Page Title */
+.page-title{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #030f27;
+}

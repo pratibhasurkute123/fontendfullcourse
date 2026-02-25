@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="main-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="user.html">User</a></li>
+        <!-- <li><a href="transporter.html">Transporter</a></li>
+        <li><a href="admin.html">Admin</a></li> -->
+
+    
+    </ul>
+
+    <div class="nav-right">
+        <span>Welcome to Dashboard</span>
+
+        <a href="#" onclick="logout()" id="logoutLink" style="display:none;">
+            Logout
+        </a>
+    </div>
+</nav>
+
+<section class="user-dashboard">
+    <h1>Welcome User</h1>
+
+    <form class="login-form" id="userLoginForm">
+        <input type="text" id="username" placeholder="Enter Username" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="message"></p> 
+</section>
+
+
+<script src="java.js"></script>
+<script>
+    
+    // If already logged in, show logout
+    if(localStorage.getItem("role") === "user"){
+        document.getElementById("logoutLink").style.display = "inline";
+        document.getElementById("userLoginForm").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

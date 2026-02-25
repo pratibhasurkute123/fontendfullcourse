@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Orders</title>
+</head>
+<body>
+
+<h1>My Orders</h1>
+
+<div id="myOrders"></div>
+
+<script>
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    let container = document.getElementById("myOrders");
+
+    orders.forEach(order => {
+
+        container.innerHTML += `
+            <div>
+                <p>${order.material}</p>
+                <p>Status: ${order.status}</p>
+            </div>
+            <hr>
+        `;
+    });
+</script>
+
+</body>
+</html>

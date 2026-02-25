@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transporter Dashboard</title>
+</head>
+<body>
+
+<h2>Transporter Dashboard</h2>
+
+<div id="transportList"></div>
+
+<script>
+
+let container = document.getElementById("transportList");
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+console.log("Orders Found:", orders);
+
+let approvedFound = false;
+
+orders.forEach((order, index) => {
+
+    if(order.status === "Approved"){
+
+        approvedFound = true;
+
+        let div = document.createElement("div");
+        div.style.border = "2px solid green";
+        div.style.padding = "10px";
+        div.style.margin = "10px";
+
+        div.innerHTML = `
+            <p><b>Material:</b> ${order.material}</p>
+            <p><b>Quantity:</b> ${order.quantity}</p>
+            <p><b>Total:</b> ₹${order.total}</p>
+            <p><b>Status:</b> ${order.status}</p>
+            <button onclick="deliverOrder(${index})">
+                Mark Delivered
+            </button>
+        `;
+
+        container.appendChild(div);
+    }
+});
+
+if(!approvedFound){
+    container.innerHTML = "<h3>No Approved Orders</h3>";
+}
+
+function deliverOrder(index){
+    orders[index].status = "Delivered";
+    localStorage.setItem("orders", JSON.stringify(orders));
+    alert("Order Delivered Successfully!");
+    location.reload();
+}
+
+</script>
+
+</body>
+</html>

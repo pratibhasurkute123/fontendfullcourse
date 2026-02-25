@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Orders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>All Pending Orders</h1>
+
+<div id="orderList"></div>
+
+<script>
+
+    // Only Admin Can Access
+
+
+    if(localStorage.getItem("role") !== "admin"){
+        window.location.href = "user.html";
+    }
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    let orderList = document.getElementById("orderList");
+
+    let found = false;
+
+    orders.forEach((order, index) => {
+
+        // Show ONLY Pending Orders
+        
+        if(order.status === "Pending"){
+
+            found = true;
+
+            orderList.innerHTML += `
+                <div style="border:1px solid black; padding:10px; margin:10px;">
+                    <p><b>Material:</b> ${order.material}</p>
+                    <p><b>Quantity:</b> ${order.quantity}</p>
+                    <p><b>Total:</b> ₹${order.total}</p>
+                    <p><b>Status:</b> ${order.status}</p>
+
+                    <button onclick="approveOrder(${index})">
+                        Approve
+                    </button>
+                </div>
+            `;
+        }
+    });
+
+    if(!found){
+        orderList.innerHTML = "<p>No Pending Orders</p>";
+    }
+
+    function approveOrder(index){
+        orders[index].status = "Approved";
+        localStorage.setItem("orders", JSON.stringify(orders));
+        location.reload();
+    }
+</script>
+
+</body>
+</html>
