@@ -1,0 +1,18 @@
+import {  createContext,  useState } from "react";
+
+
+export const ThemeContext = createContext('light');
+
+export const ThemeProvider = ({Children})=>{
+    const[theme,setTheme]=useState('light');
+
+
+    return (
+        <ThemeContext.Provider value={{theme,setTheme}}>
+            {Children}
+        </ThemeContext.Provider>
+    )
+}
+
+
+/////this is for globally data sharing////////////////

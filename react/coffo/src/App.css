@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+
+
+.about {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.line {
+  width: 2px;
+  height: 60px;
+  background-color: #d89a52; /* orange color */
+  margin: 0 auto 20PX auto;
+}
+
+.about-section{
+  max-width: 500px;
+}
+
+.subtitle{
+  font-size: 2em;
+  font-style: oblique;
+  color: #d89a52;
+}
+
+.section-title{
+  font-size: 42px;
+  font-weight: 700;
+  color: #2c1c16;   
+   margin-bottom: 20px;
+
+}
+
+.about-subtitle{
+  font-size: 20px;
+  display: flex;
+  line-height: 1.6;
+  margin-bottom: 20px;
+   color:#2c1c16;
+  font-weight: 600;
+}
+
+.about-text{
+    font-size: 16px;
+    color: #6c757d;
+     line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn-dark {
+  display: inline-block;       /* Important for padding */
+  background-color: #3b2a23;   /* Dark brown */
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;       /* Remove underline */
+  font-weight: 600;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #5a3c30;
+}
+
+ .about-container{
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 80px 20%;
+}
+
+.image img{
+  width: 350px;
+  max-width: 100%;
+}
+.image{
+  flex: 1;
+  text-align: center;
+} 
+
+/* .about-container {
+  display: flex;              
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 40px;
+}
+
+.story,
+.vision {
+  flex: 1;
+}
+
+.image {
+  flex: 1;
+  text-align: center;
+}
+
+.image img {
+  width: 350px;
+  max-width: 100%;
+} */
+
+
